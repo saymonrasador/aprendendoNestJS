@@ -12,4 +12,8 @@ export class AuthService {
     findAllUsers() {
         return this.users;
     }
+
+    findUserByEmail(email: string): User | undefined {
+        return this.users.find(user => user.email === email);
+    }
 }
